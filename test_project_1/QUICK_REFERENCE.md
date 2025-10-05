@@ -10,7 +10,7 @@
 
 **Terminal 1 - API Server**:
 ```bash
-cd C:\Users\julia\workspace\Test_Project_1\apps\api-server
+cd C:\Users\julia\workspace\Fake_projects\test_project_1\apps\api-server
 python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
 python main.py
@@ -19,7 +19,7 @@ python main.py
 
 **Terminal 2 - Frontend**:
 ```bash
-cd C:\Users\julia\workspace\Test_Project_1\apps\frontend
+cd C:\Users\julia\workspace\Fake_projects\test_project_1\apps\frontend
 npm install
 npm run dev
 # → http://localhost:5173
@@ -27,7 +27,7 @@ npm run dev
 
 **Terminal 3 - LangGraph Agent**:
 ```bash
-cd C:\Users\julia\workspace\Test_Project_1\apps\langgraph-agent
+cd C:\Users\julia\workspace\Fake_projects\test_project_1\apps\langgraph-agent
 uv venv && .venv\Scripts\activate
 uv sync
 uv run langgraph dev --no-browser --port 2028
@@ -55,7 +55,7 @@ $body = @{
   arguments = @{
     templateId = "monorepo-multi-framework"
     projectName = "Test_Project_1"
-    path = "C:\Users\julia\workspace\Test_Project_1"
+    path = "C:\Users\julia\workspace\Fake_projects\test_project_1"
     initGit = $false
   }
 } | ConvertTo-Json
