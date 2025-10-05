@@ -1,0 +1,23 @@
+{
+  "name": "test-project-1",
+  "version": "1.0.0",
+  "description": "Dev Wizard test monorepo with TypeScript frontend, Python API, and LangGraph agent",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace=apps/frontend",
+    "build:frontend": "npm run build --workspace=apps/frontend",
+    "dev:api": "cd apps/api-server && .venv\\Scripts\\activate && uvicorn main:app --reload --port 8000",
+    "dev:agent": "cd apps/langgraph-agent && uv run langgraph dev --no-browser --port 2028",
+    "install:all": "npm install && cd apps/api-server && pip install -r requirements.txt && cd ../langgraph-agent && uv sync"
+  },
+  "keywords": [
+    "test",
+    "monorepo",
+    "dev-wizard"
+  ],
+  "author": "Dev Wizard Team",
+  "license": "MIT"
+}
